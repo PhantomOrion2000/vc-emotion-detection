@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_a
 
 def fetch_data(data_path: str) -> pd.DataFrame:
     try:
-        test_data = pd.read_csv(os.path.join(data_path, "test_bow.csv"))
+        test_data = pd.read_csv(os.path.join(data_path, "test_tfidf.csv"))
         return test_data
     except FileNotFoundError as e:
         print(f"Data file not found: {e}")

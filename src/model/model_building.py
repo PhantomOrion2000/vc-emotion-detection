@@ -22,7 +22,7 @@ def get_params(params_file: str) -> dict:
 
 def fetch_data(data_path: str) -> pd.DataFrame:
     try:
-        train_data = pd.read_csv(os.path.join(data_path, "train_bow.csv"))
+        train_data = pd.read_csv(os.path.join(data_path, "train_tfidf.csv"))
         return train_data
     except FileNotFoundError as e:
         print(f"Data file not found: {e}")
