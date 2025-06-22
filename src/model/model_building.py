@@ -62,7 +62,7 @@ def main():
     try:
         params = get_params("params.yaml")
         train_data = fetch_data(os.path.join("data", "features"))
-        model_path = os.path.join("src", "models")
+        model_path = os.path.join("models")
         xgb_model = model_training(train_data, params)
         save_model(xgb_model, model_path)
         print("Model training pipeline completed successfully.")

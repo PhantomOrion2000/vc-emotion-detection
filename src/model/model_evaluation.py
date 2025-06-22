@@ -63,7 +63,7 @@ def main():
         test_data = fetch_data("data/features")
         X_test_bow = test_data.iloc[:, 0:-1].values
         y_test = test_data.iloc[:, -1].values
-        y_pred, y_pred_proba = make_predictions("src/models", X_test_bow)
+        y_pred, y_pred_proba = make_predictions("models", X_test_bow)
         metrics_dict = cal_evaluation_metrics(y_test, y_pred, y_pred_proba)
         save_metrics(metrics_dict, "reports/metrics")
         print("Evaluation pipeline completed successfully.")
